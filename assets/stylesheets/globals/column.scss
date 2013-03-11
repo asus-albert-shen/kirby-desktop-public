@@ -1,0 +1,15 @@
+@import "globals/variables";
+
+@mixin column($n, $alpha: false, $col-width: $gw-column, $gutter-width: $gw-gutter) {
+  width: $n * $gw-column + ($n - 1) * 2 * $gw-gutter;
+  float: left;
+  /*margin-right: $gw-gutter;*/
+  margin-left: 2 * $gw-gutter;
+
+  @include vertical-inline-block(top);
+
+  @if ($alpha) {
+    clear: left;
+    margin-left: 0;
+  }
+}

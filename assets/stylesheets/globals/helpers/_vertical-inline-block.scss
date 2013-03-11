@@ -1,0 +1,7 @@
+@mixin vertical-inline-block($vertical-align) {
+  display: inline-block;
+  vertical-align: $vertical-align;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: $vertical-align;
+}

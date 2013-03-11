@@ -1,0 +1,6 @@
+@import "globals/helpers/container";
+
+footer.page {
+  @include container;
+  clear: both;
+}

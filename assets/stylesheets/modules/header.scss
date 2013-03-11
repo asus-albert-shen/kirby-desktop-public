@@ -1,0 +1,35 @@
+@import "globals/helpers/container";
+@import "globals/column";
+@import "globals/_colors";
+@import "globals/_sprites";
+
+header.page {
+  background: white;
+
+  height: 50px;
+
+  nav {
+    @include container;
+
+    > h1 {
+      @include column(1, true);
+      a {
+        @include hide-text;
+        @include sprites-moovweb-logo;
+        display: block;
+      }
+    }
+
+    > ul {
+      @include column(3);
+      text-align: right;
+      li {
+        @include inline-block;
+        a {
+          color: $blue;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

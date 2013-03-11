@@ -1,5 +1,13 @@
 // Reset file for standardizing the page
 @import "globals/_reset";
 
+@import "globals/variables";
+
 // Base file contains all the global styles
-@import "globals/_base";
+@import "globals/base";
+@import "globals/helpers";
+
+@import "modules/header";
+@import "modules/projects";
+@import "modules/project_thumb";
+@import "modules/footer";

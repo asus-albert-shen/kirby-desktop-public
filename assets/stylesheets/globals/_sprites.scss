@@ -1,0 +1,21 @@
+$sprites-url: url("/_moovweb_local_assets_/images/sprites.png");
+
+$sprites-width: 159px;
+$sprites-height: 20px;
+
+$sprites-moovweb-logo-x: 0px;
+$sprites-moovweb-logo-y: 0px;
+$sprites-moovweb-logo-width: 159px;
+$sprites-moovweb-logo-height: 20px;
+
+@mixin sprites-moovweb-logo() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px 0px;
+  width: 159px;
+  height: 20px;
+}
+
+.sprites-moovweb-logo {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px 0px;
+  width: 159px;
+  height: 20px;
+}

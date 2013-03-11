@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rspec'
-gem 'selenium-webdriver'
-gem 'capybara'
+gem 'bourbon'
+
+group :development do
+  gem 'capybara'
+  gem 'rspec'
+  gem 'selenium-webdriver'
+end

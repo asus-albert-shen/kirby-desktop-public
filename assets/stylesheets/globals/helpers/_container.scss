@@ -1,0 +1,7 @@
+@import "globals/variables";
+
+@mixin container {
+  width: $gw-n-cols * ($gw-column + 2 * $gw-gutter);
+  margin: 0 auto;
+  padding: 0 $gw-gutter;
+}

@@ -1,7 +1,6 @@
 {
 	"host_map": [
-		"$.iana.org => www.iana.org",
-		"$.example.com => example.com",
-		"$.example.com => www.example.com"
+		"mlocal.remix.moovweb.com => kirby.lvh.me:3000",
+		"mlistrophy4884.remix.moovweb.com => kirby-staging.heroku.com"
 	]
 }
