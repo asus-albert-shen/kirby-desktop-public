@@ -20,7 +20,7 @@ $$('.project') {
 
     insert('div', class: 'image-toggle') {
       move_here('../../img[@data-type="original"]')
-      move_here('../../img[@data-type="zoomed-in"]')
+      move_here('../../img[@data-type="thumb"]')
     }
 
     move_here('../section[@data-type="extended-description"]')
