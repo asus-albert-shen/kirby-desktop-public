@@ -31,22 +31,37 @@ $$('.project') {
   insert('div', class: 'meta') {
     insert('div', class: 'data alpha') {
       insert('ul') {
-        insert('li', '24 Views', class: 'views')
+
+        move_here('../../../div[@data-type="view-count"]') {
+          name('li')
+          add_class('views')
+        }
+
+        /* TODO: need logins first
         insert('li', '31 Likes', class: 'likes')
+        */
+
+        /* TODO: need comments first
         insert('li', '2 Comments', class: 'comments')
+        */
+
         insert('li', class: 'source-code') {
           move_here('../../../../a[@data-type="source-code"]')
         }
+
+        /* TODO: need logins first
         insert('li', class: 'like') {
           insert('a', 'Like', href: '#')
         }
+        */
+
         insert('li', class: 'tweet') {
           insert('a', 'Tweet', href: '#')
         }
       }
     }
     move_here('../div[@data-type="creator"]') {
-      insert('div', 'By')
+      insert('p', 'By')
       insert('img', src: '/avatar.png')
       insert('div', 'Debbie Designer', class: 'name')
       insert('a', 'http://debbiedesigns.com', href: 'http://debbiedesigns.com')
