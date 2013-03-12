@@ -8,22 +8,15 @@ ul.projects li {
 
   background: white;
   $li-radius: 5px;
-  @include border-top-radius($li-radius);
-  @include border-bottom-radius($li-radius);
+  border-radius: $li-radius;
   @include prefixer(box-shadow, 1px 1px 1px 0 #CDCDCD, spec);
 
   margin-top: 10px;
 
   section {
-    padding: 5px;
+    $section-padding: 5px;
+    padding: $section-padding;
     $border-radius: 5px;
-
-    h1 {
-      font-size: floor(golden-ratio(14px, 1));
-    }
-    h2 {
-      font-size: 14px;
-    }
 
     .hoverable {
       $padding: 20px;
@@ -34,12 +27,22 @@ ul.projects li {
       z-index: 101;
       @include border-top-radius($border-radius);
       @include border-bottom-radius($border-radius);
-      width: 215px - 2 * $padding;
-      height: 215px - 2 * $padding;
+      width: column-width(1) - 2 * $section-padding;
+      height: column-width(1)- 2 * $section-padding;
       padding: $padding;
       background: black;
-      @include opacity(0.9);
+      @include opacity(0.8);
       color: white;
+
+      line-height: 1.2;
+      h1 {
+        font-size: floor(golden-ratio(14px, 1));
+        font-weight: bold;
+        margin-bottom: 14px;
+      }
+      h2 {
+        font-size: 14px;
+      }
     }
 
     a.img {
