@@ -38,6 +38,15 @@ match($status) {
         @import pages/home.ts
       }
       else() {
+        match($$('body.projects.show')) {
+          with('1') {
+            log("--> Importing pages/project_show.ts in mappings.ts")
+            @import pages/project_show.ts
+          }
+          else() {
+            log("--> No page match in mappings.ts")
+          }
+        }
         log("--> No page match in mappings.ts")
       }
     }
