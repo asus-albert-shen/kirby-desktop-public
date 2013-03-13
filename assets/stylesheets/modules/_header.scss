@@ -1,12 +1,17 @@
 @import "globals/helpers/container";
 @import "globals/column";
-@import "globals/_colors";
-@import "globals/_sprites";
+@import "globals/colors";
+@import "globals/fonts";
+@import "globals/sprites";
 
 header.page {
   background: white;
 
   height: 85px;
+
+  box-shadow-size: 2px;
+  box-shadow: 0 $box-shadow-size 0px rgba(0,0,0,0.1),inset 0 0 $box-shadow-size #fff;
+  border-bottom: 1px solid #ccc;
 
   nav {
     @include container;
@@ -30,10 +35,15 @@ header.page {
         padding-left: 20px;
         a {
           color: $blue;
-          font-weight: bold;
+          @include din-bold;
           text-decoration: none;
         }
       }
     }
   }
+}
+
+.hero-wrap {
+  margin-top: 2px;
+  border-top: 1px white solid;
 }

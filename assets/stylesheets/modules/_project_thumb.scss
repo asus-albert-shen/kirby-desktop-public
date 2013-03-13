@@ -1,4 +1,5 @@
 @import "globals/column";
+@import "globals/fonts";
 @import "globals/helpers/opacity";
 @import "globals/bourbon/functions/modular-scale";
 
@@ -37,7 +38,7 @@ ul.projects li {
       line-height: 1.2;
       h1 {
         font-size: floor(golden-ratio(14px, 1));
-        font-weight: bold;
+        @include din-bold;
         margin-bottom: 14px;
       }
       h2 {
@@ -49,6 +50,7 @@ ul.projects li {
 
       display: block;
       position: relative;
+      margin-bottom: 8px;
 
       &:hover .hoverable {
         display: block;
@@ -62,5 +64,41 @@ ul.projects li {
         z-index: 100;
       }
     }
+
+    a {
+      font-size: 12px;
+      line-height: 11px;
+      text-decoration: none;
+    }
+
+    [data-type="view-count"] {
+      font-size: 12px;
+      line-height: 11px;
+      float: right;
+      display: block;
+      background: image-url('eye-small.png') no-repeat 0 50%;
+      color: $dark-gray;
+      padding-left: 20px;
+    }
+
+    [data-type="remixed-url"] {
+      background: image-url('icon-iphone-small.png') no-repeat 0 50%;
+      display: block;
+      margin-top: 4px;
+      padding-left: 12px;
+      color: $dark-gray;
+      text-transform: uppercase;
+    }
+
+    [data-type="author"] {
+      display: block;
+      clear: both;
+      background: image-url('slashes.png') repeat-x 0 0;
+      padding-top: 12px;
+      padding-bottom: 8px;
+      margin-top: 8px;
+      color: $blue;
+    }
+
   }
 }

@@ -1,4 +1,5 @@
 @import "globals/colors";
+@import "globals/fonts";
 @import "globals/bourbon/bourbon";
 
 .image-toggle-control {
@@ -17,7 +18,7 @@
     &.selected {
       background-color: $orange;
       color: $white;
-      font-weight: bold;
+      @include din-bold;
     }
   }
 }
