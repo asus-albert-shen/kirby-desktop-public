@@ -29,7 +29,7 @@ $$('.project') {
   }
 
   insert('div', class: 'meta') {
-    insert('div', class: 'data alpha') {
+    insert('div', class: 'data') {
       insert('ul') {
 
         move_here('../../../div[@data-type="view-count"]') {

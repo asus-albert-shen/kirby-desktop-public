@@ -1,6 +1,35 @@
 @import "modules/image_toggle";
+@import "globals/column";
 
 body.projects.show #main {
   @include container;
+
+  .project {
+    padding-top: 30px;
+    h1 {
+      font-size: floor(golden-ratio(14px, 2));
+    }
+
+    .detail {
+      @include column(2, true);
+    }
+
+    .meta {
+      @include column(2);
+
+      .data {
+        @include column(1, true);
+      }
+
+      [data-type="creator"] {
+        @include column(1);
+      }
+
+      nav {
+        @include column(2, true);
+      }
+
+    }
+  }
 
 }
