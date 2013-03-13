@@ -2,18 +2,20 @@
 (function() {
 
   x$.ready(function() {
-    var toggleControl;
-    toggleControl = x$('.image-toggle-control');
-    return toggleControl.find('a').on('click', function(e) {
-      var $imagesContainer, $target;
-      e.preventDefault();
-      $target = x$(e.target);
-      toggleControl.find('a').removeClass('selected');
-      $target.addClass('selected');
-      $imagesContainer = x$(toggleControl.attr('data-image-toggle')[0]);
-      $imagesContainer.find('img').removeClass('selected');
-      return $imagesContainer.find("img[data-type='" + ($target.attr('data-image')[0]) + "']").addClass('selected');
-    });
+    var $toggleControl;
+    $toggleControl = x$('.image-toggle-control');
+    if ($toggleControl.length > 0) {
+      return $toggleControl.find('a').on('click', function(e) {
+        var $imagesContainer, $target;
+        e.preventDefault();
+        $target = x$(e.target);
+        $toggleControl.find('a').removeClass('selected');
+        $target.addClass('selected');
+        $imagesContainer = x$($toggleControl.attr('data-image-toggle')[0]);
+        $imagesContainer.find('img').removeClass('selected');
+        return $imagesContainer.find("img[data-type='" + ($target.attr('data-image')[0]) + "']").addClass('selected');
+      });
+    }
   });
 
 }).call(this);
