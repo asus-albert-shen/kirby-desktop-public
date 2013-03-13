@@ -55,6 +55,8 @@ ul.projects li {
       }
 
       img {
+        width: 215px;
+        height: 215px;
         @include border-top-radius($border-radius);
         @include border-bottom-radius($border-radius);
         z-index: 100;

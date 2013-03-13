@@ -13,13 +13,13 @@ $$('.project') {
 
     move_here('../p[@data-type="short-description"]')
 
-    insert('div', class: 'image-toggle-control') {
-      insert('div', 'Remixed', class: 'remixed-toggle selected')
-      insert('div', 'Original', class: 'original-toggle')
+    insert('div', class: 'image-toggle-control', data-image-toggle: '#shots') {
+      insert('a', 'Remixed', href: '#', data-image: 'full-shot', class: 'selected')
+      insert('a', 'Original', href: '#', data-image: 'thumb')
     }
 
-    insert('div', class: 'image-toggle') {
-      move_here('../../img[@data-type="original"]')
+    insert('div', class: 'image-toggle', id: 'shots') {
+      move_here('../../img[@data-type="full-shot"]') { add_class('selected') }
       move_here('../../img[@data-type="thumb"]')
     }
 
