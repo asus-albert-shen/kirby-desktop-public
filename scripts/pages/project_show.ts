@@ -15,12 +15,12 @@ $$('.project') {
 
     insert('div', class: 'image-toggle-control', data-image-toggle: '#shots') {
       insert('a', 'Remixed', href: '#', data-image: 'full-shot', class: 'selected')
-      insert('a', 'Original', href: '#', data-image: 'original')
+      insert('a', 'Original', href: '#', data-image: 'original-shot')
     }
 
     insert('div', class: 'image-toggle', id: 'shots') {
       move_here('../../img[@data-type="full-shot"]') { add_class('selected') }
-      move_here('../../img[@data-type="original"]')
+      move_here('../../img[@data-type="original-shot"]')
     }
 
     move_here('../section[@data-type="extended-description"]')
