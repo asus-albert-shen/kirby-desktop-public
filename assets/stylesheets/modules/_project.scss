@@ -1,13 +1,42 @@
 @import "modules/image_toggle";
 @import "globals/column";
+@import "globals/fonts";
 
 body.projects.show #main {
   @include container;
 
   .project {
-    padding-top: 30px;
-    h1 {
-      font-size: floor(golden-ratio(14px, 2));
+    .header {
+      padding-top: 50px;
+      font-size: 14px;
+
+      h1 {
+        font-size: floor(golden-ratio(14px, 2));
+        @include din-bolder;
+      }
+
+      .urls {
+        @include din-bolder;
+        color: $dark-gray;
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        > div {
+          @include inline-block;
+          margin-right: 20px;
+        }
+
+        a {
+          @include din-regular;
+          color: $blue;
+          padding-left: 4px;
+        }
+      }
+
+      p {
+        margin-top: 8px;
+        margin-bottom: 18px;
+      }
     }
 
     .detail {

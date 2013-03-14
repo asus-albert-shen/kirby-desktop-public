@@ -21,7 +21,6 @@ ul.projects {
   h2 {
     @include column(2, true);
 
-    padding-top: 30px;
     padding-bottom: 10px;
 
     text-transform: uppercase;

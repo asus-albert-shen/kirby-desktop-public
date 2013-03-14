@@ -49,7 +49,9 @@
 
 $footer-vertical-padding: 36px;
 $button-height: 45px;
-$footer-height: ceil(1.1 * $button-height + 2 * $footer-vertical-padding);
+
+/* "3 * $footer-vertical-padding" because we want extra bottom spacing */
+$footer-height: ceil(1.1 * $button-height + 3 * $footer-vertical-padding);
 @include sticky-footer($footer-height);
 
 footer.page {

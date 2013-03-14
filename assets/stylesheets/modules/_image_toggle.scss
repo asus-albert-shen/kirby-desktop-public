@@ -5,31 +5,37 @@
 .image-toggle-control {
   border-radius: 3px;
   overflow: hidden;
+  margin-top: 20px;
 
   a {
-    @include inline-block;
+    display: block;
+    float: left;
     text-decoration: none;
-    padding: 10px;
+    padding: 4px 30px;
     background-color: $light-gray;
-    color: $medium-gray;
+    color: $dark-gray;
     width: 8em;
     text-align: center;
+    font-size: 12px;
 
     &.selected {
       background-color: $orange;
       color: $white;
-      @include din-bold;
+      @include din-bolder;
     }
   }
 }
 
 .image-toggle {
   width: 470px;
-  height: 470px;
+  padding: 10px;
+  border-radius: 3px;
+  @include prefixer(box-shadow, 1px 1px 6px 2px #CDCDCD, spec);
   overflow: hidden;
+  background-color: white;
 
   img {
-    width: 470px;
+    width: 450px;
     display: none;
     &.selected {
       display: block;
