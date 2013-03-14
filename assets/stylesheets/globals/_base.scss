@@ -15,4 +15,7 @@
 body {
   background-color: $background-color;
   @include din-regular;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
