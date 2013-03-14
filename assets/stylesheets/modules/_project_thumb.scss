@@ -10,7 +10,7 @@ ul.projects li {
   background: white;
   $li-radius: 5px;
   border-radius: $li-radius;
-  @include prefixer(box-shadow, 1px 1px 1px 0 #CDCDCD, spec);
+  @include prefixer(box-shadow, 1px 1px 6px 2px #CDCDCD, spec);
 
   margin-top: 10px;
 
