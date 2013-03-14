@@ -1,4 +1,3 @@
-@import "modules/image_toggle";
 @import "globals/column";
 @import "globals/fonts";
 
@@ -10,10 +9,72 @@ body.projects.show #main {
       padding-top: 50px;
       font-size: 14px;
 
-      h1 {
-        font-size: floor(golden-ratio(14px, 2));
-        @include din-bolder;
+      hgroup {
+        h1 {
+          font-size: floor(golden-ratio(14px, 2));
+          @include din-bolder;
+        }
+
+        h2 {
+          margin-top: 8px;
+          margin-bottom: 18px;
+        }
       }
+
+      [data-type="creator"] {
+        float: right;
+
+        .avatar {
+          float: left;
+          height: 60px;
+          width: 60px;
+        }
+      }
+    }
+
+    .two-up {
+      > div {
+        position: relative;
+        background-color: $white;
+        padding: 10px;
+        border-radius: 3px;
+        @include prefixer(box-shadow, 1px 1px 6px 2px #CDCDCD, spec);
+      }
+
+      h3 {
+        position: absolute;
+        top: 30px;
+        background-color: $orange;
+        @include din-bolder;
+        text-transform: uppercase;
+        color: $white;
+        padding: 4px 8px;
+        font-size: 14px;
+      }
+
+      .remixed {
+        @include column(2, true);
+        h3 {
+          @include border-left-radius(3px);
+          right: $gw-gutter;
+        }
+      }
+
+      .original {
+        @include column(2);
+        h3 {
+          @include border-right-radius(3px);
+          left: $gw-gutter;
+        }
+      }
+    }
+
+    .detail {
+      @include column(2, true);
+    }
+
+    .meta {
+      @include column(2);
 
       .urls {
         @include din-bolder;
@@ -33,25 +94,8 @@ body.projects.show #main {
         }
       }
 
-      p {
-        margin-top: 8px;
-        margin-bottom: 18px;
-      }
-    }
-
-    .detail {
-      @include column(2, true);
-    }
-
-    .meta {
-      @include column(2);
-
       .data {
         @include column(1, true);
-      }
-
-      [data-type="creator"] {
-        @include column(1);
       }
 
       nav {

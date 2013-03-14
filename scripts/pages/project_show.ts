@@ -1,6 +1,30 @@
 $$('.project') {
   insert_top('div', class: 'header') {
-    move_here('../h1')
+
+    move_here('../div[@data-type="creator"]') {
+      insert_top('img', src: '/avatar.png') { add_class('avatar') }
+    }
+
+    insert('hgroup') {
+      move_here('../../h1')
+      move_here('../../p[@data-type="short-description"]') { name('h2') }
+    }
+  }
+
+  insert('div', class: 'two-up') {
+
+    insert('div', class: 'remixed') {
+      insert('h3', 'Remixed')
+      move_here('../../img[@data-type="full-shot"]')
+    }
+
+    insert('div', class: 'original') {
+      insert('h3', 'Original')
+      move_here('../../img[@data-type="original-shot"]')
+    }
+  }
+
+  insert('div', class: 'data') {
 
     insert('div', class: 'urls') {
       insert('div', 'Remixed:', class: 'original') {
@@ -11,67 +35,25 @@ $$('.project') {
       }
     }
 
-    move_here('../p[@data-type="short-description"]')
-  }
-
-  insert('div', class: 'detail') {
-
-    insert('div', class: 'image-toggle', id: 'shots') {
-      move_here('../../img[@data-type="full-shot"]') { add_class('selected') }
-      move_here('../../img[@data-type="original-shot"]')
+    move_here('../div[@data-type="view-count"]') {
+      add_class('views')
     }
 
-    insert('div', class: 'image-toggle-control', data-image-toggle: '#shots') {
-      insert('a', 'Remixed', href: '#', data-image: 'full-shot', class: 'selected')
-      insert('a', 'Original', href: '#', data-image: 'original-shot')
+    insert('div', class: 'source-code') {
+      move_here('../../a[@data-type="source-code"]')
     }
 
-    move_here('../section[@data-type="extended-description"]')
+    insert('div', class: 'like') {
+      insert('a', 'Like', href: '#')
+    }
 
-    move_here('../section[@data-type="comments"]')
+    insert('div', class: 'tweet') {
+      insert('a', 'Tweet', href: '#')
+    }
   }
 
   insert('div', class: 'meta') {
-    insert('div', class: 'data') {
-      insert('ul') {
-
-        move_here('../../../div[@data-type="view-count"]') {
-          name('li')
-          add_class('views')
-        }
-
-        /* TODO: need logins first
-        insert('li', '31 Likes', class: 'likes')
-        */
-
-        /* TODO: need comments first
-        insert('li', '2 Comments', class: 'comments')
-        */
-
-        insert('li', class: 'source-code') {
-          move_here('../../../../a[@data-type="source-code"]')
-        }
-
-        /* TODO: need logins first
-        insert('li', class: 'like') {
-          insert('a', 'Like', href: '#')
-        }
-        */
-
-        insert('li', class: 'tweet') {
-          insert('a', 'Tweet', href: '#')
-        }
-      }
-    }
-    move_here('../div[@data-type="creator"]') {
-      insert('p', 'By')
-      insert('img', src: '/avatar.png')
-      insert('div', 'Debbie Designer', class: 'name')
-      insert('a', 'http://debbiedesigns.com', href: 'http://debbiedesigns.com')
-    }
-    insert('nav') {
-      insert('a', 'View Next Remix', href: '#')
-      insert('a', 'View Previous Remix', href: '#')
-    }
+    move_here('../section[@data-type="extended-description"]')
+    move_here('../section[@data-type="comments"]')
   }
 }
