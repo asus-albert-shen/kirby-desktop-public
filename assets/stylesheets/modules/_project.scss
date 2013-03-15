@@ -4,6 +4,11 @@
 body.projects.show #main {
   @include container;
 
+  hr {
+    border: 0;
+    border-bottom: 1px solid $light-gray;
+  }
+
   .project {
     @include clearfix;
 
@@ -25,12 +30,33 @@ body.projects.show #main {
 
       [data-type="creator"] {
         float: right;
+        min-width: column-width(1);
+        max-width: ceil(column-width(1.5));
 
         .avatar {
           float: left;
           height: 50px;
           width: 50px;
+          margin-right: 10px;
         }
+
+        .creator-name {
+          color: $dark-gray;
+          a {
+            @include din-bolder;
+            color: $black;
+            text-decoration: none;
+          }
+        }
+
+        .homepage {
+          margin-top: 8px;
+          a {
+            text-decoration: none;
+            color: $blue;
+          }
+        }
+
       }
     }
 
@@ -156,6 +182,16 @@ body.projects.show #main {
     .meta {
       @include column(2, true);
       @include clearfix;
+
+      > h3 {
+        color: $orange;
+        text-transform: uppercase;
+        font-size: 24px;
+        @include din-bolder;
+        letter-spacing: 2px;
+        margin-top: 24px;
+        margin-bottom: 12px;
+      }
 
       section[data-type='extended-description'] {
         margin-top: 36px;

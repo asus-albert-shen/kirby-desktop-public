@@ -1,7 +1,13 @@
 $$('.project') {
   insert_top('div', class: 'header') {
 
-    move_here('../div[@data-type="creator"]')
+    move_here('../div[@data-type="creator"]') {
+      $('img') { add_class('avatar') }
+      insert('div', 'by ', class: 'creator-name') {
+        move_here('./../a[@data-type="name"]')
+      }
+      move_here('./a[@data-type="homepage"]') { wrap('div', class: 'homepage') }
+    }
 
     insert('hgroup') {
       move_here('../../h1')
@@ -47,7 +53,6 @@ $$('.project') {
         /*insert('a') {*/
           /*attribute('href', concat($url, '#disqus_thread'))*/
         /*}*/
-        /*insert('a', href: ($url, '#disqus_thread'))*/
       /*}*/
     }
 
@@ -63,6 +68,8 @@ $$('.project') {
 
   insert('div', class: 'meta') {
     move_here('../section[@data-type="extended-description"]')
+    insert('hr')
+    insert('h3', 'Join the Discussion')
     move_here('../section[@data-type="comments"]')
   }
 }
