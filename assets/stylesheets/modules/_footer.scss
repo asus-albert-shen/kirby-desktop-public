@@ -57,10 +57,10 @@ $footer-height: ceil(1.1 * $button-height + 3 * $footer-vertical-padding);
 footer.page {
   background-color: $light-gray;
   height: $footer-height;
+  clear: both;
 
   .footer-wrapper {
     @include container;
-    clear: both;
     text-align: right;
     padding-top: 36px;
     padding-bottom: 36px;

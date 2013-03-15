@@ -1,21 +1,174 @@
 $sprites-url: url("/_moovweb_local_assets_/images/sprites.png");
 
 $sprites-width: 159px;
-$sprites-height: 20px;
+$sprites-height: 157px;
+
+$sprites-comment-icon-show-x: 0px;
+$sprites-comment-icon-show-y: 0px;
+$sprites-comment-icon-show-width: 18px;
+$sprites-comment-icon-show-height: 18px;
+
+$sprites-eye-icon-index-x: 0px;
+$sprites-eye-icon-index-y: -19px;
+$sprites-eye-icon-index-width: 17px;
+$sprites-eye-icon-index-height: 11px;
+
+$sprites-eye-icon-show-x: 0px;
+$sprites-eye-icon-show-y: -31px;
+$sprites-eye-icon-show-width: 18px;
+$sprites-eye-icon-show-height: 12px;
+
+$sprites-heart-icon-like-button-x: 0px;
+$sprites-heart-icon-like-button-y: -44px;
+$sprites-heart-icon-like-button-width: 13px;
+$sprites-heart-icon-like-button-height: 13px;
+
+$sprites-heart-icon-show-x: 0px;
+$sprites-heart-icon-show-y: -58px;
+$sprites-heart-icon-show-width: 16px;
+$sprites-heart-icon-show-height: 16px;
+
+$sprites-iphone-icon-index-x: 0px;
+$sprites-iphone-icon-index-y: -75px;
+$sprites-iphone-icon-index-width: 7px;
+$sprites-iphone-icon-index-height: 11px;
+
+$sprites-iphone-icon-show-x: 0px;
+$sprites-iphone-icon-show-y: -87px;
+$sprites-iphone-icon-show-width: 13px;
+$sprites-iphone-icon-show-height: 19px;
 
 $sprites-moovweb-logo-x: 0px;
-$sprites-moovweb-logo-y: 0px;
+$sprites-moovweb-logo-y: -107px;
 $sprites-moovweb-logo-width: 159px;
 $sprites-moovweb-logo-height: 20px;
 
-@mixin sprites-moovweb-logo() {
+$sprites-remix-icon-x: 0px;
+$sprites-remix-icon-y: -128px;
+$sprites-remix-icon-width: 15px;
+$sprites-remix-icon-height: 18px;
+
+$sprites-tweet-icon-button-x: 0px;
+$sprites-tweet-icon-button-y: -147px;
+$sprites-tweet-icon-button-width: 14px;
+$sprites-tweet-icon-button-height: 10px;
+
+@mixin sprites-comment-icon-show() {
   background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px 0px;
+  width: 18px;
+  height: 18px;
+}
+
+@mixin sprites-eye-icon-index() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -19px;
+  width: 17px;
+  height: 11px;
+}
+
+@mixin sprites-eye-icon-show() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -31px;
+  width: 18px;
+  height: 12px;
+}
+
+@mixin sprites-heart-icon-like-button() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -44px;
+  width: 13px;
+  height: 13px;
+}
+
+@mixin sprites-heart-icon-show() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -58px;
+  width: 16px;
+  height: 16px;
+}
+
+@mixin sprites-iphone-icon-index() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -75px;
+  width: 7px;
+  height: 11px;
+}
+
+@mixin sprites-iphone-icon-show() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -87px;
+  width: 13px;
+  height: 19px;
+}
+
+@mixin sprites-moovweb-logo() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -107px;
   width: 159px;
   height: 20px;
 }
 
-.sprites-moovweb-logo {
+@mixin sprites-remix-icon() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -128px;
+  width: 15px;
+  height: 18px;
+}
+
+@mixin sprites-tweet-icon-button() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -147px;
+  width: 14px;
+  height: 10px;
+}
+
+.sprites-comment-icon-show {
   background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px 0px;
+  width: 18px;
+  height: 18px;
+}
+
+.sprites-eye-icon-index {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -19px;
+  width: 17px;
+  height: 11px;
+}
+
+.sprites-eye-icon-show {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -31px;
+  width: 18px;
+  height: 12px;
+}
+
+.sprites-heart-icon-like-button {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -44px;
+  width: 13px;
+  height: 13px;
+}
+
+.sprites-heart-icon-show {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -58px;
+  width: 16px;
+  height: 16px;
+}
+
+.sprites-iphone-icon-index {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -75px;
+  width: 7px;
+  height: 11px;
+}
+
+.sprites-iphone-icon-show {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -87px;
+  width: 13px;
+  height: 19px;
+}
+
+.sprites-moovweb-logo {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -107px;
   width: 159px;
   height: 20px;
+}
+
+.sprites-remix-icon {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -128px;
+  width: 15px;
+  height: 18px;
+}
+
+.sprites-tweet-icon-button {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -147px;
+  width: 14px;
+  height: 10px;
 }

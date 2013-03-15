@@ -1,9 +1,7 @@
 $$('.project') {
   insert_top('div', class: 'header') {
 
-    move_here('../div[@data-type="creator"]') {
-      insert_top('img', src: '/avatar.png') { add_class('avatar') }
-    }
+    move_here('../div[@data-type="creator"]')
 
     insert('hgroup') {
       move_here('../../h1')
@@ -27,29 +25,40 @@ $$('.project') {
   insert('div', class: 'data') {
 
     insert('div', class: 'urls') {
+      insert('div', class: 'original-icon')
       insert('div', 'Remixed:', class: 'original') {
         move_here('../../../a[@data-type="original-url"]')
       }
+      insert('div', class: 'remixed-icon')
       insert('div', 'Try it:', class: 'remixed') {
         move_here('../../../a[@data-type="remixed-url"]')
       }
     }
 
-    move_here('../div[@data-type="view-count"]') {
-      add_class('views')
+    insert('div', class: 'numbers') {
+      insert('div', class: 'view-count-icon')
+      move_here('../../div[@data-type="view-count"]') {
+        add_class('views')
+        text() {
+          replace('Views', '')
+        }
+      }
+      /*insert('div', class: 'comment-count') {*/
+        /*insert('a') {*/
+          /*attribute('href', concat($url, '#disqus_thread'))*/
+        /*}*/
+        /*insert('a', href: ($url, '#disqus_thread'))*/
+      /*}*/
     }
 
-    insert('div', class: 'source-code') {
-      move_here('../../a[@data-type="source-code"]')
+    insert('div', class: 'social') {
+      move_here('//div[contains(@class, "fb-like")]')
+      move_here('//a[contains(@class, "twitter-share-button")]')
     }
+  }
 
-    insert('div', class: 'like') {
-      insert('a', 'Like', href: '#')
-    }
-
-    insert('div', class: 'tweet') {
-      insert('a', 'Tweet', href: '#')
-    }
+  insert('div', class: 'source-code') {
+    move_here('../a[@data-type="source-code"]') { text(){prepend('Get ')} }
   }
 
   insert('div', class: 'meta') {

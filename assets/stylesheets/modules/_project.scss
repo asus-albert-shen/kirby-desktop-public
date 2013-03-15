@@ -5,13 +5,15 @@ body.projects.show #main {
   @include container;
 
   .project {
+    @include clearfix;
+
     .header {
-      padding-top: 50px;
       font-size: 14px;
 
       hgroup {
         h1 {
           font-size: floor(golden-ratio(14px, 2));
+          line-height: 1;
           @include din-bolder;
         }
 
@@ -26,8 +28,8 @@ body.projects.show #main {
 
         .avatar {
           float: left;
-          height: 60px;
-          width: 60px;
+          height: 50px;
+          width: 50px;
         }
       }
     }
@@ -69,40 +71,108 @@ body.projects.show #main {
       }
     }
 
-    .detail {
-      @include column(2, true);
+    .data, .source-code {
+      margin-top: 2 * $gw-gutter;
+      border-radius: 3px;
+      height: 40px;
+      @include prefixer(box-shadow, 1px 1px 6px 2px #CDCDCD, spec);
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .data {
+      @include column(3, true);
+      background-color: $white;
+      font-size: 14px;
+
+      padding-top: (36px - 14px) / 2;
+
+      div {
+        float: left;
+      }
+
+      .urls, .numbers, .social {
+        color: $dark-gray;
+        border-right: 1px solid $light-gray;
+        padding: 0 6px;
+        height: 19px;
+      }
+
+      .urls {
+        a {
+          @include din-bold;
+          color: $blue;
+          margin-left: 4px;
+        }
+
+        .original-icon {
+          margin-left: 6px;
+          margin-right: 8px;
+          @include sprites-remix-icon;
+        }
+
+        .remixed-icon {
+          margin-left: 20px;
+          margin-right: 8px;
+          @include sprites-iphone-icon-show;
+        }
+
+        .original, .remixed {
+          margin-top: 2px;
+        }
+      }
+
+      .numbers {
+        line-height: 19px;
+        .view-count-icon {
+          margin-top: 4px;
+          margin-right: 4px;
+          @include sprites-eye-icon-show;
+        }
+      }
+
+      .social {
+        line-height: 19px;
+        border-right: none;
+
+        .fb-like, .twitter-share-button {
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .source-code {
+      @include column(1);
+      text-align: center;
+      line-height: 40px;
+      background-color: $blue;
+      @include din-bolder;
+      a {
+        color: $white;
+      }
     }
 
     .meta {
-      @include column(2);
+      @include column(2, true);
+      @include clearfix;
 
-      .urls {
-        @include din-bolder;
-        color: $dark-gray;
-        margin-top: 8px;
-        margin-bottom: 8px;
+      section[data-type='extended-description'] {
+        margin-top: 36px;
+        margin-bottom: 36px;
 
-        > div {
-          @include inline-block;
-          margin-right: 20px;
-        }
-
-        a {
-          @include din-regular;
-          color: $blue;
-          padding-left: 4px;
-        }
+        h1 { font-size: 24px; line-height: 1.4; @include din-bolder; }
+        h2 { font-size: 20px; line-height: 1.2; @include din-bold; }
+        h3 { font-size: 16px; @include din-bolder; }
+        h4 { font-size: 14px; @include din-bold; }
       }
-
-      .data {
-        @include column(1, true);
-      }
-
-      nav {
-        @include column(2, true);
-      }
-
     }
+  }
+
+  #disqus_thread {
+    @include column(2, true);
+    @include clearfix;
+    clear: both;
   }
 
 }
