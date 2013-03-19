@@ -26,7 +26,9 @@ $$('.project') {
 
     insert('div', class: 'original') {
       insert('h3', 'Original')
-      move_here('../../img[@data-type="original-shot"]')
+      move_here('../../img[@data-type="original-shot"]') {
+        attribute('style', 'height: 419px; width: 450px;')
+      }
     }
   }
 
