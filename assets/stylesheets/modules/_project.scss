@@ -190,13 +190,14 @@ body.projects.show #main {
       }
 
       section[data-type='extended-description'] {
-        margin-top: 36px;
+        margin-top: 24px;
         margin-bottom: 36px;
 
-        h1 { font-size: 24px; line-height: 1.4; @include din-bolder; }
+        h1 { font-size: 24px; line-height: 1.4; @include din-bolder; margin-top: 18px; }
         h2 { font-size: 20px; line-height: 1.2; @include din-bold; }
         h3 { font-size: 16px; @include din-bolder; }
         h4 { font-size: 14px; @include din-bold; }
+        p { line-height: 1.4; margin: 12px auto; }
       }
     }
   }
