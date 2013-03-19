@@ -3,6 +3,7 @@
 
 body.projects.show #main {
   @include container;
+  padding-top: 32px;
 
   hr {
     border: 0;

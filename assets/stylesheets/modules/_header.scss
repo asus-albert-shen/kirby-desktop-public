@@ -9,12 +9,11 @@ header.page {
 
   height: 48px;
 
-  box-shadow-size: 2px;
-  box-shadow: 0 $box-shadow-size 0px rgba(0,0,0,0.1),inset 0 0 $box-shadow-size #fff;
   border-bottom: 1px solid #ccc;
 
   nav {
     @include container;
+    height: 50px;
 
     > h1 {
       @include column(1, true);
@@ -29,14 +28,16 @@ header.page {
     > ul {
       @include column(3);
       text-align: right;
-      padding-top: 14px;
+      margin-top: 5px;
       li {
         @include inline-block;
-        padding-left: 20px;
+        padding: 13px 10px;
+        width: 150px;
+        line-height: 21px;
         a {
           color: $blue;
-          @include din-bold;
           text-decoration: none;
+          font-size: 14px;
         }
       }
     }
@@ -44,6 +45,5 @@ header.page {
 }
 
 .hero-wrap {
-  margin-top: 2px;
   border-top: 1px white solid;
 }

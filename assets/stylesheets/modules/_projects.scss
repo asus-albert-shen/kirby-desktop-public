@@ -22,6 +22,7 @@ ul.projects {
     @include column(2, true);
 
     padding-bottom: 10px;
+    padding-top: 24px;
 
     text-transform: uppercase;
     font-size: floor(golden-ratio(14px, 2));
@@ -42,7 +43,7 @@ ul.projects {
   }
 }
 
-.projects {
+div.projects {
   li {
     margin-bottom: 56px;
   }
