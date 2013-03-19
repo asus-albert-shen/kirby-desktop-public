@@ -52,10 +52,6 @@ body.projects.show #main {
 
         .homepage {
           margin-top: 8px;
-          a {
-            text-decoration: none;
-            color: $blue;
-          }
         }
 
       }
@@ -129,7 +125,6 @@ body.projects.show #main {
       .urls {
         a {
           @include din-bold;
-          color: $blue;
           margin-left: 4px;
         }
 

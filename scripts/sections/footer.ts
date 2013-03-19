@@ -14,7 +14,10 @@ $$('body') {
 
 $$('footer.page') {
   insert('div', class: 'footer-wrapper') {
-    move_here('../p[@data-type="copyright"]')
+    insert('div', class: 'fine-print') {
+      move_here('../../p[@data-type="copyright"]')
+      move_here('../../p[@data-type="attribution"]')
+    }
     insert('div', class: 'buttons') {
       move_here('../../*[contains(@class, "btn")]')
     }

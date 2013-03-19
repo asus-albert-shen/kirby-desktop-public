@@ -65,11 +65,15 @@ footer.page {
     padding-top: 36px;
     padding-bottom: 36px;
 
-    [data-type='copyright'] {
-      text-align: left;
+    .fine-print {
+      margin-top: 12px;
       float: left;
-      font-size: ceil(golden-ratio(16px, -1));
-      line-height: $button-height;
+      color: $black;
+      p {
+        text-align: left;
+        font-size: ceil(golden-ratio(16px, -1));
+        margin-top: 4px;
+      }
     }
 
     .btn {
