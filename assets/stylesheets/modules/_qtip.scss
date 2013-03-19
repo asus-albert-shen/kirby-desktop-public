@@ -1,0 +1,12 @@
+@import "globals/colors";
+@import "globals/fonts";
+
+.qtip-moovweb {
+  border-width: 0;
+  background-color: $blue;
+  color: $white;
+  @include din-bolder;
+  font-size: 12px;
+  border-radius: 3px;
+  @include moov-shadow;
+}

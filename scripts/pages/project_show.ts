@@ -38,6 +38,8 @@ $$('.project') {
       insert('div', class: 'original-icon')
       insert('div', 'Remixed:', class: 'original') {
         move_here('../../../a[@data-type="original-url"]') {
+          add_class('tooltipped')
+          attribute('title', text())
           text() {
             replace(/https?:\/\/(?:www\.)?/, '')
           }
@@ -46,6 +48,8 @@ $$('.project') {
       insert('div', class: 'remixed-icon')
       insert('div', 'Try it:', class: 'remixed') {
         move_here('../../../a[@data-type="remixed-url"]') {
+          add_class('tooltipped')
+          attribute('title', text())
           text() {
             replace(/https?:\/\/(?:www\.)?/, '')
           }

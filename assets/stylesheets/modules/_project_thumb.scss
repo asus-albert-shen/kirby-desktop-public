@@ -1,6 +1,7 @@
 @import "globals/column";
 @import "globals/fonts";
 @import "globals/helpers/opacity";
+@import "globals/helpers/moov-shadow";
 @import "globals/bourbon/functions/modular-scale";
 
 ul.projects li {
@@ -10,7 +11,7 @@ ul.projects li {
   background: white;
   $li-radius: 5px;
   border-radius: $li-radius;
-  @include prefixer(box-shadow, 1px 1px 6px 2px #CDCDCD, spec);
+  @include moov-shadow;
 
   margin-top: 10px;
 
