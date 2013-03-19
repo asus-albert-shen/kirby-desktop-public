@@ -7,8 +7,6 @@
 header.page {
   background: white;
 
-  height: 48px;
-
   border-bottom: 1px solid #ccc;
 
   nav {
@@ -17,7 +15,7 @@ header.page {
 
     > h1 {
       @include column(1, true);
-      padding-top: 12px;
+      padding-top: 15px;
       a {
         @include hide-text;
         @include sprites-moovweb-logo;
