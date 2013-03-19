@@ -1,6 +1,7 @@
 @import "globals/column";
 @import "globals/fonts";
 @import "globals/helpers/ellipsis";
+@import "globals/helpers/moov-shadow";
 
 body.projects.show #main {
   @include container;
@@ -64,7 +65,7 @@ body.projects.show #main {
         background-color: $white;
         padding: 10px;
         border-radius: 3px;
-        @include prefixer(box-shadow, 1px 1px 6px 2px #CDCDCD, spec);
+        @include moov-shadow;
       }
 
       h3 {
@@ -99,7 +100,7 @@ body.projects.show #main {
       margin-top: 2 * $gw-gutter;
       border-radius: 3px;
       height: 40px;
-      @include prefixer(box-shadow, 1px 1px 6px 2px #CDCDCD, spec);
+      @include moov-shadow;
       a {
         text-decoration: none;
       }
