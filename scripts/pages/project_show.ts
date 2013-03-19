@@ -19,7 +19,9 @@ $$('.project') {
 
     insert('div', class: 'remixed') {
       insert('h3', 'Remixed')
-      move_here('../../img[@data-type="full-shot"]')
+      move_here('../../img[@data-type="full-shot"]') {
+        attribute('style', 'height: 419px; width: 450px;')
+      }
     }
 
     insert('div', class: 'original') {
