@@ -37,11 +37,19 @@ $$('.project') {
     insert('div', class: 'urls') {
       insert('div', class: 'original-icon')
       insert('div', 'Remixed:', class: 'original') {
-        move_here('../../../a[@data-type="original-url"]')
+        move_here('../../../a[@data-type="original-url"]') {
+          text() {
+            replace(/https?:\/\/(?:www\.)?/, '')
+          }
+        }
       }
       insert('div', class: 'remixed-icon')
       insert('div', 'Try it:', class: 'remixed') {
-        move_here('../../../a[@data-type="remixed-url"]')
+        move_here('../../../a[@data-type="remixed-url"]') {
+          text() {
+            replace(/https?:\/\/(?:www\.)?/, '')
+          }
+        }
       }
     }
 

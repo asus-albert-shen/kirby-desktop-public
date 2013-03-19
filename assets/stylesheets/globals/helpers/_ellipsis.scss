@@ -1,0 +1,10 @@
+@mixin ellipsis($max-width: false) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -moz-binding: image-url('ellipsis.xml#ellipsis');
+
+  @if $max-width { max-width: $max-width; }
+}

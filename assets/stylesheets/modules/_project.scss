@@ -1,5 +1,6 @@
 @import "globals/column";
 @import "globals/fonts";
+@import "globals/helpers/ellipsis";
 
 body.projects.show #main {
   @include container;
@@ -142,6 +143,7 @@ body.projects.show #main {
 
         .original, .remixed {
           margin-top: 2px;
+          a { @include ellipsis(125px); @include inline-block; }
         }
       }
 
