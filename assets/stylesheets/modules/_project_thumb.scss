@@ -3,6 +3,7 @@
 @import "globals/helpers/opacity";
 @import "globals/helpers/moov-shadow";
 @import "globals/bourbon/functions/modular-scale";
+@import "globals/bourbon/css3/transition";
 
 ul.projects li {
   @include column(1);
@@ -23,7 +24,27 @@ ul.projects li {
     .hoverable {
       $padding: 20px;
 
-      display: none;
+      /* TRANSITIONS */
+      $heading-transition-duration: 0.5s;
+
+      @include transition(all 0.2s linear);
+      h1 {
+        @include transition(all $heading-transition-duration ease-in);
+        margin-top: 285px;
+        margin-bottom: 0px;
+      }
+      &:hover {
+        @include transition(all 0.2s linear);
+        background-color: rgba(0, 0, 0, 0.8);
+        h1 {
+          @include transition(all $heading-transition-duration ease-out);
+          margin-top: 0px;
+          margin-bottom: 14px;
+        }
+      }
+      /* end transitions */
+
+      display: block;
 
       position: absolute;
       z-index: 101;
@@ -32,15 +53,15 @@ ul.projects li {
       width: column-width(1) - 2 * $section-padding;
       height: column-width(1)- 2 * $section-padding;
       padding: $padding;
-      background: black;
-      @include opacity(0.8);
+      background-color: rgba(0, 0, 0, 0);
       color: white;
+      overflow: hidden;
 
       line-height: 1.2;
+
       h1 {
         font-size: floor(golden-ratio(14px, 1));
         @include din-bold;
-        margin-bottom: 14px;
       }
       h2 {
         font-size: 14px;
@@ -52,10 +73,6 @@ ul.projects li {
       display: block;
       position: relative;
       margin-bottom: 8px;
-
-      &:hover .hoverable {
-        display: block;
-      }
 
       img {
         width: 215px;
