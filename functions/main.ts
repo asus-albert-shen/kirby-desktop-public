@@ -22,6 +22,8 @@
 #    }
 #  }
 
+@import tipped_url.ts
+
 @func XMLNode.btn_delegate() {
   %class = fetch("./@class")
   %mw_id = concat("mw_", name(), "_", fetch("./@id"))
