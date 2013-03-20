@@ -19,7 +19,12 @@ $$('footer.page') {
       move_here('../../p[@data-type="attribution"]')
     }
     insert('div', class: 'buttons') {
-      move_here('../../*[contains(@class, "btn")]')
+      move_here('../../a[@data-type="submit-your-own"]') {
+        wrap('div', class: 'btn-wrapper')
+      }
+      move_here('../../a[@data-type="moovweb-signup"]') {
+        wrap('div', class: 'btn-wrapper')
+      }
     }
   }
 }
