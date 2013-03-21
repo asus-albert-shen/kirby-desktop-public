@@ -25,29 +25,27 @@ match($path) {
 
 match($status) {
 
-  with(/302/) {
-    log("--> STATUS: 302") # redirect: just let it go through
-  }
+  with(/302/) { log("--> STATUS: 302") }
 
   with(/200/) {
     log("--> STATUS: 200")
 
     match($path) {
-      with(/^\/$|^\/\?/) {
-        log("--> Importing pages/home.ts in mappings.ts")
-        @import pages/home.ts
-      }
-      else() {
+      with(/^\/$|^\/\?/) { @import pages/home.ts }
+
+      with(/^\/html5devconf\/register$/)  { @import pages/html5devconf/register.ts }
+      with(/^\/html5devconf\/submit$/)    { @import pages/html5devconf/submit.ts }
+      with(/^\/html5devconf\/submitted$/) { @import pages/html5devconf/submitted.ts }
+      with(/^\/html5devconf\/thanks$/)    { @import pages/html5devconf/thanks.ts }
+
+      else() { # tricky because the url for a remix could be anything
         match($$('body.projects.show')) {
           with('1') {
             log("--> Importing pages/project_show.ts in mappings.ts")
             @import pages/project_show.ts
           }
-          else() {
-            log("--> No page match in mappings.ts")
-          }
+          else() { log("--> No page match in mappings.ts") }
         }
-        log("--> No page match in mappings.ts")
       }
     }
   }
