@@ -32,21 +32,23 @@ ul.projects li {
       h1 {
         @include transition(all $heading-transition-duration ease-in);
         margin-top: 225px;
-        margin-bottom: 0px;
         @include opacity(0);
+      }
+      h1, h2 {
+        @include transition(all $heading-transition-duration ease-in);
+        line-height: 0;
       }
 
       /* hover state */
       &:hover {
-        @include transition(all 0.2s linear);
         background-color: rgba(0, 0, 0, 0.8);
         h1 {
-          @include transition(all $heading-transition-duration ease-in);
           margin-top: 0px;
-          margin-bottom: 14px;
           @include opacity(1);
         }
+        h1, h2 { line-height: 1.2; }
       }
+
       /* end transitions */
 
 
@@ -68,6 +70,7 @@ ul.projects li {
       h1 {
         font-size: floor(golden-ratio(14px, 1));
         @include din-bold;
+        margin-bottom: 14px;
       }
       h2 {
         font-size: 14px;
