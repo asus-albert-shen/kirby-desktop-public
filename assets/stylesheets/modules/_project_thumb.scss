@@ -27,22 +27,28 @@ ul.projects li {
       /* TRANSITIONS */
       $heading-transition-duration: 0.5s;
 
+      /* non-hover state */
       @include transition(all 0.2s linear);
       h1 {
         @include transition(all $heading-transition-duration ease-in);
-        margin-top: 285px;
+        margin-top: 225px;
         margin-bottom: 0px;
+        @include opacity(0);
       }
+
+      /* hover state */
       &:hover {
         @include transition(all 0.2s linear);
         background-color: rgba(0, 0, 0, 0.8);
         h1 {
-          @include transition(all $heading-transition-duration ease-out);
+          @include transition(all $heading-transition-duration ease-in);
           margin-top: 0px;
           margin-bottom: 14px;
+          @include opacity(1);
         }
       }
       /* end transitions */
+
 
       display: block;
 
