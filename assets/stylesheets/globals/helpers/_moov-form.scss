@@ -14,13 +14,55 @@
   }
 
   > .inputs > ol {
-
     margin: -$vert-field-margin 0;
 
     > li {
       margin: $vert-field-margin 0;
 
-      &.string, &.email, &.phone, &.url, &.text, &.mobile_devices {
+      &.teammate {
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        transition: all 400ms ease;
+
+        ol { margin-top: -$vert-field-margin; }
+
+        &.shown {
+          height: 172px;
+          li { margin: $vert-field-margin 0; }
+        }
+      }
+
+
+      &.add-teammate {
+        margin-top: 0;
+        a {
+          display: block;
+          background: $medium-gray;
+          color: $white;
+          line-height: 36px;
+          font-size: 16px;
+          @include din-bolder;
+          text-align: center;
+          border-radius: 3px;
+
+          &:hover {
+            background: $dark-gray;
+          }
+
+          span {
+            border-right: 1px solid $white;
+            float: left;
+            height: 36px; width: 36px;
+            font-size: 32px;
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 1;
+          }
+        }
+      }
+
+
+      &.string, &.email, &.phone, &.url, &.text, &.mobile_devices, &.teammate {
         label, legend {
           @include din-bolder;
           display: block;
