@@ -7,6 +7,11 @@ body.html5devconf {
   .description {
   }
 
+  .signup-form {
+    @include column(2);
+    background-color: cyan;
+  }
+
   .judges-container {
     @include column(4, true);
 
