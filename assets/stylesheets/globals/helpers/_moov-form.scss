@@ -38,6 +38,33 @@
         }
       }
 
+      &.mobile_devices {
+        input[type="checkbox"] {
+          display: none;
+
+          &:checked + label {
+            background: $blue;
+            color: $white;
+          }
+        }
+        li {
+          float: left;
+          &.last { float: right; }
+          width: 47%;
+
+          label {
+            cursor: pointer;
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid $medium-gray;
+            text-align: center;
+            line-height: 36px;
+            @include din-bolder;
+            color: $medium-gray;
+          }
+        }
+      }
+
       &.boolean {
         input[type="checkbox"] {
           margin: 1px 16px 6px 0;
@@ -55,16 +82,6 @@
         height: 36px;
         line-height: 36px;
         font-size: 24px;
-      }
-    }
-
-    fieldset.choices {
-      li {
-        float: left;
-
-        label {
-          @include din-regular;
-        }
       }
     }
   }

@@ -4,8 +4,6 @@
 @import "globals/column";
 
 body.html5devconf {
-  .description {
-  }
 
   .signup-form {
     @include column(2);
