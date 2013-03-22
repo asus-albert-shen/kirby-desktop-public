@@ -1,0 +1,50 @@
+@import "globals/bourbon/bourbon";
+@import "globals/helpers/call-to-action-button";
+@import "globals/helpers/moov-form";
+@import "globals/column";
+
+body.html5devconf {
+  .description {
+  }
+
+  .judges-container {
+    @include column(4, true);
+
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      @include din-bold;
+      margin: -10px 0 24px;
+    }
+
+    ul.judges li {
+      @include column(1);
+      &.alpha { @include column(1, true); }
+
+      background-color: $white;
+      border-radius: 3px;
+      @include moov-shadow;
+
+      line-height: 1.4;
+      padding: 5px;
+
+      img {
+        border-radius: 3px;
+        float: left;
+        margin-right: 5px;
+      }
+
+      .name, .title, .company {
+        font-size: 14px;
+      }
+
+      .name {
+        @include din-bolder;
+      }
+
+      .company {
+        @include din-italic;
+      }
+    }
+  }
+}

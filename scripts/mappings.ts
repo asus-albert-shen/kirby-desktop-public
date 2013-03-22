@@ -33,6 +33,7 @@ match($status) {
     match($path) {
       with(/^\/$|^\/\?/) { @import pages/home.ts }
 
+      with(/^\/html5devconf\/?$/)         { @import pages/html5devconf/register.ts }
       with(/^\/html5devconf\/register$/)  { @import pages/html5devconf/register.ts }
       with(/^\/html5devconf\/submit$/)    { @import pages/html5devconf/submit.ts }
       with(/^\/html5devconf\/submitted$/) { @import pages/html5devconf/submitted.ts }
