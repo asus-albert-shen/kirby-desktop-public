@@ -9,7 +9,10 @@ body.html5devconf {
 
   .signup-form {
     @include column(2);
-    background-color: cyan;
+    iframe {
+      width: 100%;
+      height: 680px;
+    }
   }
 
   .judges-container {
