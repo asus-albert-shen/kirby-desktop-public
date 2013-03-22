@@ -5,6 +5,7 @@
 @import "bourbon/_bourbon";
 @import "globals/fonts";
 @import "globals/colors";
+@import "globals/variables";
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -23,4 +24,12 @@ body {
 a, a:visited, a:hover, a:active {
   color: $blue;
   text-decoration: none;
+}
+
+strong {
+  @include din-bolder;
+}
+
+p {
+  line-height: $line-height;
 }

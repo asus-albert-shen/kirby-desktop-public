@@ -23,6 +23,7 @@
 #  }
 
 @import tipped_url.ts
+@import numbered_ol.ts
 
 @func XMLNode.btn_delegate() {
   %class = fetch("./@class")

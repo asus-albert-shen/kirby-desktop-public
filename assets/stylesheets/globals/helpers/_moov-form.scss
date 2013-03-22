@@ -1,0 +1,61 @@
+@mixin moov-form {
+
+  padding: 40px;
+  background-color: $white;
+
+  $vert-field-margin: 28px;
+
+  .inputs ol {
+
+    margin: -$vert-field-margin 0;
+
+    li {
+      margin: $vert-field-margin 0;
+
+      &.string, &.email, &.phone, &.url {
+        label {
+          @include din-bolder;
+          display: block;
+          margin-bottom: 6px;
+        }
+
+        input {
+          border-radius: 3px;
+          border: 1px solid $medium-gray;
+        }
+      }
+
+      &.boolean {
+        input[type="checkbox"] {
+          margin: 1px 16px 6px 0;
+          float: left;
+          height: 16px;
+          width: 16px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    input {
+      &[type="text"], &[type="email"], &[type="tel"], &[type="url"] {
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .actions {
+    margin-top: $vert-field-margin;
+    padding-top: 28px;
+  }
+
+  /* TODO: get rid of gray border */
+  button {
+    @include call-to-action-button($orange, 45px);
+    @include din-regular;
+    width: 260px;
+  }
+
+}

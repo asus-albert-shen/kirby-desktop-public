@@ -1,0 +1,48 @@
+@import "globals/colors";
+@import "globals/bourbon/css3/inline-block";
+
+
+@mixin call-to-action-button($color, $height) {
+  @include inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background: $color;
+  height: $height;
+  line-height: 44px;
+  text-align: left;
+  border-radius: 3px;
+  border-bottom: 2px solid darken($color, 20%);
+  text-shadow: 0 1px 1px darken($color, 30%);
+  font-size: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+  padding-left: 35px;
+  text-decoration: none;
+
+  &:before {
+    content: "»";
+    color: $yellow;
+    display: block;
+    float: left;
+    font-size: 20px;
+    margin: 20px -10px 0 -20px;
+    line-height: 0;
+    height: 10px;
+    width: 10px;
+  }
+  &:hover {
+    border-bottom: 2px solid darken($color, 9%);
+    text-shadow: 0 1px 0px darken($color, 15%);
+    &:before {
+      color: white;
+    }
+  }
+  &:active {
+    border-bottom: none;
+    border-top: 2px solid darken($color, 15%);
+    text-shadow: 0 1px 1px darken($color, 20%);
+  }
+}
+

@@ -1,0 +1,85 @@
+@import "globals/bourbon/bourbon";
+@import "globals/helpers/call-to-action-button";
+@import "globals/helpers/moov-form";
+@import "globals/column";
+
+body.html5devconf {
+  #main {
+    @include container;
+
+    h1 {
+      @include column(4, true);
+      line-height: 64px;
+      margin-top: 24px;
+
+      font-size: 32px;
+      @include din-bolder;
+    }
+
+    hr {
+      @include column(4, true);
+      margin: 18px 0 36px;
+    }
+  }
+
+  .description {
+    @include column(2, true);
+
+    h2 {
+      @include din-bolder;
+      font-size: 18px;
+      color: $orange;
+      margin: 0 0 18px;
+    }
+
+    p {
+      margin: 18px 0;
+    }
+
+    ol.numbered {
+      border-top: $white 1px solid;
+
+      li {
+        margin: 24px 0;
+        padding-bottom: 24px;
+        line-height: $line-height;
+
+        border-bottom: $white 1px solid;
+
+        div.number {
+          height: 36px; width: 36px;
+          border-radius: 18px;
+          line-height: 36px;
+          text-align: center;
+
+          background-color: $blue;
+          color: $white;
+          @include din-bolder;
+
+          margin-right: 36px;
+          float: left;
+        }
+      }
+    }
+
+  }
+
+
+  .moov-form {
+    @include column(2);
+
+    > * {
+      margin: 0 40px;
+    }
+
+    form {
+      @include moov-form();
+    }
+
+    .fine-print {
+      margin-top: 6px;
+      font-size: 12px;
+    }
+  }
+
+}
