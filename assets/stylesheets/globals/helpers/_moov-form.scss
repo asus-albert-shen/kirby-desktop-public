@@ -5,23 +5,36 @@
 
   $vert-field-margin: 28px;
 
-  .inputs ol {
+  input[type="checkbox"] {
+    margin: 1px 16px 6px 0;
+    float: left;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+  }
+
+  > .inputs > ol {
 
     margin: -$vert-field-margin 0;
 
-    li {
+    > li {
       margin: $vert-field-margin 0;
 
-      &.string, &.email, &.phone, &.url {
-        label {
+      &.string, &.email, &.phone, &.url, &.text, &.mobile_devices {
+        label, legend {
           @include din-bolder;
           display: block;
           margin-bottom: 6px;
         }
 
-        input {
+        input, textarea {
           border-radius: 3px;
           border: 1px solid $medium-gray;
+          width: 100%;
+        }
+
+        textarea {
+          height: 60px;
         }
       }
 
@@ -42,6 +55,16 @@
         height: 36px;
         line-height: 36px;
         font-size: 24px;
+      }
+    }
+
+    fieldset.choices {
+      li {
+        float: left;
+
+        label {
+          @include din-regular;
+        }
       }
     }
   }

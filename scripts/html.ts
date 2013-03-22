@@ -6,6 +6,7 @@ $("/html") {
 
   add_assets()
 
+  @import sections/form.ts
   @import sections/header.ts
   @import sections/footer.ts
 
