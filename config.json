@@ -1,6 +1,7 @@
 {
 	"host_map": [
 		"mlocal.remix.moovweb.com => kirby.lvh.me:3000",
-		"$.remix.moovweb.com => kirby-staging.herokuapp.com"
+		"$.remix-staging.moovweb.com => kirby-staging.herokuapp.com",
+		"$.remix.moovweb.com => kirby-production.herokuapp.com"
 	]
 }
