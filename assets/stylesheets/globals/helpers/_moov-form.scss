@@ -1,3 +1,5 @@
+@import "globals/colors";
+
 @mixin moov-form {
 
   padding: 40px;
@@ -13,23 +15,19 @@
     line-height: 16px;
   }
 
+  li {
+    margin: $vert-field-margin 0;
+  }
+
   > .inputs > ol {
     margin: -$vert-field-margin 0;
 
     > li {
-      margin: $vert-field-margin 0;
 
       &.teammate {
-        height: 0;
-        overflow: hidden;
-        margin: 0;
-        transition: all 400ms ease;
-
-        ol { margin-top: -$vert-field-margin; }
-
+        display: none;
         &.shown {
-          height: 172px;
-          li { margin: $vert-field-margin 0; }
+          display: block;
         }
       }
 
@@ -78,6 +76,13 @@
         textarea {
           height: 60px;
         }
+
+        &.error {
+          label { color: $red; }
+          input, textarea {
+            border: $red 1px solid;
+          }
+        }
       }
 
       &.mobile_devices {
@@ -91,6 +96,7 @@
         }
         li {
           float: left;
+          margin: 0;
           &.last { float: right; }
           width: 47%;
 
@@ -105,6 +111,13 @@
             color: $medium-gray;
           }
         }
+
+        &.error {
+          label { color: $red; }
+          li label {
+            border: $red 1px solid;
+          }
+        }
       }
 
       &.boolean {
@@ -114,6 +127,9 @@
           height: 16px;
           width: 16px;
           line-height: 16px;
+        }
+        &.error {
+          label { color: $red; }
         }
       }
     }
@@ -140,4 +156,11 @@
     width: 260px;
   }
 
+  .error-message {
+    border-radius: 3px;
+    background: $red;
+    color: $white;
+    margin-bottom: $vert-field-margin * 2;
+    padding: 10px 16px;
+  }
 }

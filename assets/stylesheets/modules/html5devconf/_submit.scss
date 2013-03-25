@@ -43,6 +43,21 @@ body.html5devconf {
       margin-top: 6px;
       font-size: 12px;
     }
+
+    .success-message {
+      margin: 0;
+      padding: 48px;
+
+      background-color: $green;
+      color: white;
+      border-radius: 3px;
+
+      h2 {
+        @include din-bolder;
+        font-size: 18px;
+        margin-bottom: 18px;
+      }
+    }
   }
 
 }

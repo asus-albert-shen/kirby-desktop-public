@@ -8,7 +8,7 @@
       unshown = $('.teammate').not('.shown');
       unshown.first().addClass('shown');
       if (unshown.length === 1) {
-        return $(e.target).remove();
+        return $(e.target).parent('li.add-teammate').remove();
       }
     });
   });

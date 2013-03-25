@@ -3,4 +3,4 @@ $ ->
     e.preventDefault()
     unshown = $('.teammate').not('.shown')
     unshown.first().addClass('shown')
-    $(e.target).remove() if unshown.length == 1
+    $(e.target).parent('li.add-teammate').remove() if unshown.length == 1
