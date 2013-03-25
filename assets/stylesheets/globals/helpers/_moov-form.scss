@@ -78,7 +78,7 @@
           height: 60px;
         }
 
-        &.error {
+        &.error, .error {
           label { color: $red; }
           input, textarea {
             border: $red 1px solid;
