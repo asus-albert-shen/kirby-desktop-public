@@ -1,5 +1,4 @@
 # The main file executed by Tritium. The start of all other files.
-# Ignore this comment. Added to file to trigger a rebuild.
 
 match($content_type) {
   with(/html/) {
