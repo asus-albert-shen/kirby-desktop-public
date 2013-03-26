@@ -5,10 +5,10 @@ deployment and testing the tritium layer also has staging and production version
 
 The URL translation is controlled by the config.json file.
 
-remix.moovweb.com => production tritium project, production rails app
-remix.remix-staging.moovweb.com => production tritium project, production rails app
-remix-staging.moovweb.com => staging tritium project, production rails app
-remix-staging.remix-staging.com => staging tritium project, staging rails app
+    remix.moovweb.com => production tritium project, production rails app
+    remix.remix-staging.moovweb.com => production tritium project, production rails app
+    remix-staging.moovweb.com => staging tritium project, production rails app
+    remix-staging.remix-staging.com => staging tritium project, staging rails app
 
 To understand this nomenclature, the first subdomain controls the tritium layer and the second subdomain/domain controls the rails app. 
 
