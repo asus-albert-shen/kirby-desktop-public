@@ -1,4 +1,5 @@
 # HTML Transformations go here
+# comment to trigger rebuild
 
 $("/html") {
   rewrite_links()
