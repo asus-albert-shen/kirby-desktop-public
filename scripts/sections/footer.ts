@@ -7,6 +7,7 @@
 $$('body') {
   insert_top('div', id: 'root') {
     move_here('../header')
+    move_here('../p[contains(@class, "html5devconf-banner")]')
     move_here('../div[@id="main"]')
     insert('div', id: 'root_footer')
   }

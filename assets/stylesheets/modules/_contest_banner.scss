@@ -1,0 +1,22 @@
+@import "globals/bourbon/bourbon";
+@import "globals/column";
+@import "globals/colors";
+@import "globals/fonts";
+
+p.html5devconf-banner {
+  display: block;
+  clear: both;
+  text-align: center;
+
+  background-color: $orange;
+
+  border-bottom: 2px solid darken($orange, 30%);
+
+  a {
+    color: $yellow;
+    @include din-bolder;
+    font-size: 24px;
+    line-height: 64px;
+    border-bottom: 3px solid $yellow;
+  }
+}
