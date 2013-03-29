@@ -1,7 +1,7 @@
 $sprites-url: url("/_moovweb_local_assets_/images/sprites.png");
 
 $sprites-width: 159px;
-$sprites-height: 157px;
+$sprites-height: 178px;
 
 $sprites-comment-icon-show-x: 0px;
 $sprites-comment-icon-show-y: 0px;
@@ -48,8 +48,13 @@ $sprites-remix-icon-y: -128px;
 $sprites-remix-icon-width: 15px;
 $sprites-remix-icon-height: 18px;
 
+$sprites-remix-logo-x: 0px;
+$sprites-remix-logo-y: -147px;
+$sprites-remix-logo-width: 100px;
+$sprites-remix-logo-height: 20px;
+
 $sprites-tweet-icon-button-x: 0px;
-$sprites-tweet-icon-button-y: -147px;
+$sprites-tweet-icon-button-y: -168px;
 $sprites-tweet-icon-button-width: 14px;
 $sprites-tweet-icon-button-height: 10px;
 
@@ -107,8 +112,14 @@ $sprites-tweet-icon-button-height: 10px;
   height: 18px;
 }
 
-@mixin sprites-tweet-icon-button() {
+@mixin sprites-remix-logo() {
   background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -147px;
+  width: 100px;
+  height: 20px;
+}
+
+@mixin sprites-tweet-icon-button() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -168px;
   width: 14px;
   height: 10px;
 }
@@ -167,8 +178,14 @@ $sprites-tweet-icon-button-height: 10px;
   height: 18px;
 }
 
-.sprites-tweet-icon-button {
+.sprites-remix-logo {
   background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -147px;
+  width: 100px;
+  height: 20px;
+}
+
+.sprites-tweet-icon-button {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px -168px;
   width: 14px;
   height: 10px;
 }
