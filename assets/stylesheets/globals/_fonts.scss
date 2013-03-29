@@ -1,50 +1,27 @@
-@font-face {
-  font-family: 'din-bolder';
-  src: image-url('fonts/din-bold-webfont.eot');
-  src: image-url('fonts/din-bold-webfont.eot?#iefix') format('embedded-opentype'), image-url('fonts/din-bold-webfont.woff') format('woff'), image-url('fonts/din-bold-webfont.ttf') format('truetype'), image-url('fonts/din-bold-webfont.svg#din-boldregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+@each $variant in Bold, BoldItalic, Headline, Italic, Light, LightItalic, Medium, MediumItalic, Regular {
+
+  @font-face {
+    font-family: 'TSTARPRO-#{$variant}';
+    src: image-url('fonts/TSTARPRO-#{$variant}.eot');
+    src: image-url('fonts/TSTARPRO-#{$variant}.eot?#iefix') format('embedded-opentype'), image-url('fonts/TSTARPRO-#{$variant}.woff') format('woff'), image-url('fonts/TSTARPRO-#{$variant}.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 }
 
-@font-face {
-  font-family: 'din-bold';
-  src: image-url('fonts/din-medium-webfont.eot');
-  src: image-url('fonts/din-medium-webfont.eot?#iefix')
-  format('embedded-opentype'), image-url('fonts/din-medium-webfont.woff') format('woff'), image-url('fonts/din-medium-webfont.ttf') format('truetype'), image-url('fonts/din-medium-webfont.svg#din-mediumregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+@mixin font-bolder {
+  font-family: 'TSTARPRO-Headline'
 }
 
-@font-face {
-  font-family: 'din';
-  src: image-url('fonts/din-regular-webfont.eot');
-  src: image-url('fonts/din-regular-webfont.eot?#iefix') format('embedded-opentype'), image-url('fonts/din-regular-webfont.woff') format('woff'), image-url('fonts/din-regular-webfont.ttf')
-  format('truetype'), image-url('fonts/din-regular-webfont.svg#din-regularregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+@mixin font-bold {
+  font-family: 'TSTARPRO-Bold'
 }
 
-@font-face {
-  font-family: 'din-italic';
-  src: image-url('fonts/din-regularitalic-webfont.eot');
-  src: image-url('fonts/din-regularitalic-webfont.eot?#iefix') format('embedded-opentype'), image-url('fonts/din-regularitalic-webfont.woff') format('woff'), image-url('fonts/din-regularitalic-webfont.ttf') format('truetype'), image-url('fonts/din-regularitalic-webfont.svg#din-regularitalicregular')
-  format('svg');
-  font-weight: normal;
-  font-style: normal;
+@mixin font-regular {
+  font-family: 'TSTARPRO-Regular'
 }
 
-@mixin din-bolder {
-  font-family: 'din-bolder'
-}
-
-@mixin din-bold {
-  font-family: 'din-bold'
-}
-
-@mixin din-regular {
-  font-family: 'din'
-}
-
-@mixin din-italic {
-  font-family: 'din-italic'
+@mixin font-italic {
+  font-family: 'TSTARPRO-Italic'
 }

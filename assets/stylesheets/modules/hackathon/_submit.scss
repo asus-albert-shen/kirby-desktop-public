@@ -24,7 +24,7 @@ body.hackathon {
 
           background-color: $blue;
           color: $white;
-          @include din-bolder;
+          @include font-bolder;
 
           margin-right: 36px;
           float: left;
@@ -53,7 +53,7 @@ body.hackathon {
       border-radius: 3px;
 
       h2 {
-        @include din-bolder;
+        @include font-bolder;
         font-size: 18px;
         margin-bottom: 18px;
       }

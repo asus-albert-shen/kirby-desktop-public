@@ -30,7 +30,7 @@ ul.projects {
 
     strong {
       color: $blue;
-      @include din-bolder;
+      @include font-bolder;
       display: block;
     }
   }

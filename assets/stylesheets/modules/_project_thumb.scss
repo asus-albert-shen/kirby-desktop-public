@@ -69,7 +69,7 @@ ul.projects li {
 
       h1 {
         font-size: floor(golden-ratio(14px, 1));
-        @include din-bold;
+        @include font-bold;
         margin-bottom: 14px;
       }
       h2 {

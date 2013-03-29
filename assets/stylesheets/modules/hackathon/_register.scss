@@ -19,7 +19,7 @@ body.hackathon {
     h2 {
       font-size: 24px;
       text-transform: uppercase;
-      @include din-bold;
+      @include font-bold;
       margin: -10px 0 24px;
     }
 
@@ -45,11 +45,11 @@ body.hackathon {
       }
 
       .name {
-        @include din-bolder;
+        @include font-bolder;
       }
 
       .company {
-        @include din-italic;
+        @include font-italic;
       }
     }
   }

@@ -15,7 +15,7 @@
 
 body {
   background-color: $background-color;
-  @include din-regular;
+  @include font-regular;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -27,7 +27,7 @@ a, a:visited, a:hover, a:active {
 }
 
 strong {
-  @include din-bolder;
+  @include font-bolder;
 }
 
 p {

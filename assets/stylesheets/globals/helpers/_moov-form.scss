@@ -41,7 +41,7 @@
           color: $white;
           line-height: 36px;
           font-size: 16px;
-          @include din-bolder;
+          @include font-bolder;
           text-align: center;
           border-radius: 3px;
 
@@ -63,7 +63,7 @@
 
       &.string, &.email, &.phone, &.url, &.text, &.mobile_devices, &.teammate {
         label, legend {
-          @include din-bolder;
+          @include font-bolder;
           display: block;
           margin-bottom: 6px;
         }
@@ -108,7 +108,7 @@
             border: 1px solid $medium-gray;
             text-align: center;
             line-height: 36px;
-            @include din-bolder;
+            @include font-bolder;
             color: $medium-gray;
           }
         }
@@ -153,7 +153,7 @@
   /* TODO: get rid of gray border */
   button {
     @include call-to-action-button($orange, 45px);
-    @include din-regular;
+    @include font-regular;
     width: 260px;
   }
 
