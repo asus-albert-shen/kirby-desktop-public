@@ -33,11 +33,11 @@ match($status) {
     match($path) {
       with(/^\/$|^\/\?/) { @import pages/home.ts }
 
-      with(/^\/html5devconf\/?$/)         { @import pages/html5devconf/register.ts }
-      with(/^\/html5devconf\/register$/)  { @import pages/html5devconf/register.ts }
-      with(/^\/html5devconf\/submit$/)    { @import pages/html5devconf/submit.ts }
-      with(/^\/html5devconf\/submitted$/) { @import pages/html5devconf/submitted.ts }
-      with(/^\/html5devconf\/thanks$/)    { @import pages/html5devconf/thanks.ts }
+      with(/^\/hackathon\/?$/)         { @import pages/hackathon/register.ts }
+      with(/^\/hackathon\/register$/)  { @import pages/hackathon/register.ts }
+      with(/^\/hackathon\/submit$/)    { @import pages/hackathon/submit.ts }
+      with(/^\/hackathon\/submitted$/) { @import pages/hackathon/submitted.ts }
+      with(/^\/hackathon\/thanks$/)    { @import pages/hackathon/thanks.ts }
 
       else() { # tricky because the url for a remix could be anything
         match($$('body.projects.show')) {
