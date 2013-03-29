@@ -6,16 +6,16 @@ ul.projects {
 }
 
 .hero-wrap {
-  background-color: #000;
+  background-color: $white;
 }
 
 .hero {
   @include container;
   @include clearfix;
 
-  background: image-url('kids.png') no-repeat right;
+  background: image-url('tritium-hero.png') no-repeat right;
 
-  height: 272px;
+  height: 300px;
   margin-bottom: 80px;
 
   h2 {
@@ -37,7 +37,7 @@ ul.projects {
 
   p {
     @include column(2, true);
-    color: $medium-gray;
+    color: $dark-gray;
     padding-bottom: 10px;
     line-height: 1.4;
   }
