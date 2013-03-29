@@ -1,7 +1,7 @@
-@import "modules/html5devconf/submit";
-@import "modules/html5devconf/register";
+@import "modules/hackathon/submit";
+@import "modules/hackathon/register";
 
-body.html5devconf {
+body.hackathon {
   #main {
     @include container;
 

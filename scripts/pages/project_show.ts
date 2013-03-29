@@ -21,6 +21,7 @@ $$('.project') {
       insert('h3', 'Remixed')
       move_here('../../img[@data-type="full-shot"]') {
         attribute('style', 'height: 419px; width: 450px;')
+        wrap('a', href: fetch('//a[@data-type="remixed-url"]/@href'), target: '_blank')
       }
     }
 
@@ -28,6 +29,7 @@ $$('.project') {
       insert('h3', 'Original')
       move_here('../../img[@data-type="original-shot"]') {
         attribute('style', 'height: 419px; width: 450px;')
+        wrap('a', href: fetch('//a[@data-type="original-url"]/@href'), target: '_blank')
       }
     }
   }
