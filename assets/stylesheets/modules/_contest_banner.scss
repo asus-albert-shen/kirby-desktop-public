@@ -14,7 +14,7 @@ p.hackathon-banner {
 
   a {
     color: $yellow;
-    @include font-bolder;
+    @include font-bold;
     font-size: 24px;
     line-height: 64px;
     border-bottom: 3px solid $yellow;
