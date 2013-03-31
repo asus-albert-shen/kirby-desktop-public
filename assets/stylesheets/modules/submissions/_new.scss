@@ -1,0 +1,81 @@
+@import "globals/bourbon/bourbon";
+@import "globals/helpers/call-to-action-button";
+@import "globals/helpers/moov-form";
+@import "globals/column";
+
+body.submissions.new {
+
+  #main {
+    @include container;
+
+    h1 {
+      color: $orange;
+      @include font-bolder;
+      margin: 24px 0 12px;
+      font-size: 24px;
+    }
+
+    p.description {
+      @include column(2, true);
+    }
+
+    .moov-form {
+      @include column(4, true);
+      margin-top: 24px;
+
+      form {
+        @include moov-form();
+        @include moov-shadow;
+        @include clearfix;
+      }
+
+      fieldset.inputs {
+        width: column-width(2) - 80px;
+        float: left;
+
+        @include vertical-inline-block(top);
+        margin-left: 2 * $gw-gutter + 40px;
+
+        &.first {
+          clear: left;
+          margin-left: 0;
+        }
+
+        li.file {
+          margin-top: 0;
+        }
+      }
+
+      textarea#submission_description {
+        height: 208px;
+      }
+
+      .actions {
+        li {
+          margin-top: 0;
+        }
+      }
+
+      .fine-print {
+        margin-top: 6px;
+        font-size: 12px;
+      }
+
+      .success-message {
+        margin: 0;
+        padding: 48px;
+
+        background-color: $green;
+        color: white;
+        border-radius: 3px;
+
+        h2 {
+          @include font-bolder;
+          font-size: 18px;
+          margin-bottom: 18px;
+        }
+      }
+    }
+
+  }
+}

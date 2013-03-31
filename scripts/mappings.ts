@@ -39,6 +39,8 @@ match($status) {
       with(/^\/hackathon\/submitted$/) { @import pages/hackathon/submitted.ts }
       with(/^\/hackathon\/thanks$/)    { @import pages/hackathon/thanks.ts }
 
+      with(/^\/submissions\/new\/?$/)  { @import pages/submissions/new.ts }
+
       else() { # tricky because the url for a remix could be anything
         match($$('body.projects.show')) {
           with('1') {
